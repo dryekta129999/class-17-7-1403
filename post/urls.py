@@ -1,5 +1,5 @@
-from django.urls import path, include
-from food import views
+from django.urls import path
+from . import views
 
 app_name = 'post'
 
@@ -7,6 +7,6 @@ app_name = 'post'
 urlpatterns = [
 
 
-    # path('show_post/',views.show_post,name='show_post'),
+   path('', views.show_post, name='show'),
 
 ]
