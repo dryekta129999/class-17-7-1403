@@ -1,3 +1,4 @@
+{#{% extends "admin/base_site.html" %}#}
 {% extends '_base.html' %}
 
 {% block title %}
@@ -6,7 +7,31 @@
 
 
 {% block content %}
-	  <h1 class="display-1 text-center">Show Post</h1>
+
+
+           <h1 class="display-1 text-center">Show Post 5</h1>
+           <hr>
+
+
+
+                      {% for post in posts %}
+                       <h1 class="display-1">{{ post.title }}</h1>
+                       <p>{{ post.content }}</p>
+                       <h3>{{ post.status }}</h3>
+                       <p>تاریخ ایجاد: {{ post.created_at }}</p>
+                     {% endfor %}
+
+
+
+               <p>==================================================</p>
+
+
+
+
+
+
+
+
 {% endblock content %}
 
 
